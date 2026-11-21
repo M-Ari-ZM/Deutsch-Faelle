@@ -1,0 +1,45 @@
+version: 2
+updates:
+  # Pembaruan dependensi npm (package.json & package-lock.json)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Asia/Jakarta"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "javascript"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    # Pengelompokan PR agar tidak membanjiri repo dengan pull request terpisah
+    groups:
+      react-ecosystem:
+        patterns:
+          - "react*"
+          - "@types/react*"
+      linting-tooling:
+        patterns:
+          - "eslint*"
+          - "@eslint*"
+          - "globals"
+      vite-tailwind:
+        patterns:
+          - "vite*"
+          - "@vitejs/*"
+          - "tailwindcss*"
+          - "@tailwindcss/*"
+
+  # Pembaruan otomatis untuk GitHub Actions (jika nanti ditambahkan ke repositori)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "ci"
+    commit-message:
+      prefix: "chore(ci)"

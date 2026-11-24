@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import {
   LayoutDashboard,
   BookOpen,
@@ -11,27 +13,32 @@ import {
 const navigation = [
   {
     label: "Dashboard",
+    path: "/",
     icon: LayoutDashboard,
-    active: true,
   },
   {
     label: "Learn Grammar",
+    path: "/learn",
     icon: BookOpen,
   },
   {
     label: "Sentence Analyzer",
+    path: "/analyzer",
     icon: ScanText,
   },
   {
     label: "Practice",
+    path: "/practice",
     icon: Brain,
   },
   {
     label: "Declension Tables",
+    path: "/declension",
     icon: Table2,
   },
   {
     label: "My Progress",
+    path: "/progress",
     icon: ChartNoAxesColumn,
   },
 ];
@@ -62,18 +69,22 @@ function Sidebar() {
           const Icon = item.icon;
 
           return (
-            <button
-              key={item.label}
-              className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium transition-all duration-200 ${
-                item.active
-                  ? "border border-[#C62828]/20 bg-[#C62828]/10 text-[#E53935]"
-                  : "text-[#A3A3A3] hover:bg-[#222222] hover:text-white"
-              }`}
+            <NavLink
+              key={item.path}
+              to={item.path}
+              end={item.path === "/"}
+              className={({ isActive }) =>
+                `flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium transition-all duration-200 ${
+                  isActive
+                    ? "border border-[#C62828]/20 bg-[#C62828]/10 text-[#E53935]"
+                    : "text-[#A3A3A3] hover:bg-[#222222] hover:text-white"
+                }`
+              }
             >
               <Icon className="h-5 w-5" />
 
               {item.label}
-            </button>
+            </NavLink>
           );
         })}
       </nav>

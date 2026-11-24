@@ -10,6 +10,8 @@ import Practice from "./pages/Practice";
 import DeclensionTables from "./pages/DeclensionTables";
 import MyProgress from "./pages/MyProgress";
 
+import LessonDetail from "./pages/LessonDetail";
+
 function App() {
   return (
     <div className="flex min-h-screen bg-[#171717]">
@@ -26,6 +28,8 @@ function App() {
               <Route path="/" element={<Dashboard />} />
 
               <Route path="/learn" element={<LearnGrammar />} />
+
+              <Route path="/learn/:caseId" element={<LessonDetail />} />
 
               <Route path="/analyzer" element={<SentenceAnalyzer />} />
 

@@ -1,4 +1,5 @@
 import { ArrowRight, BookOpen } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const colorStyles = {
   blue: {
@@ -35,6 +36,8 @@ const colorStyles = {
 };
 
 function CaseCard({ grammarCase }) {
+  const navigate = useNavigate();
+
   const styles = colorStyles[grammarCase.color];
 
   return (
@@ -149,7 +152,10 @@ function CaseCard({ grammarCase }) {
         </div>
 
         {/* Footer */}
-        <button className="mt-5 flex w-full items-center justify-between rounded-xl border border-[#383838] bg-[#2B2B2B] px-4 py-3 text-sm font-semibold transition-all duration-200 group-hover:border-[#555555] group-hover:bg-[#333333]">
+        <button
+          onClick={() => navigate(`/learn/${grammarCase.id}`)}
+          className="mt-5 flex w-full items-center justify-between rounded-xl border border-[#383838] bg-[#2B2B2B] px-4 py-3 text-sm font-semibold transition-all duration-200 group-hover:border-[#555555] group-hover:bg-[#333333]"
+        >
           <span
             style={{
               color: styles.accentLight,

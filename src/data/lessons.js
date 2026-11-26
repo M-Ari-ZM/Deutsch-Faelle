@@ -212,4 +212,247 @@ export const lessons = {
       },
     ],
   },
+
+  akkusativ: {
+    id: "akkusativ",
+    title: "Akkusativ",
+    subtitle: "Das direkte Objekt",
+    description:
+      "Akkusativ digunakan untuk menunjukkan objek langsung yang menerima tindakan dalam sebuah kalimat.",
+    color: "red",
+
+    introduction: {
+      title: "What is Akkusativ?",
+      content:
+        "Akkusativ merupakan kasus yang digunakan untuk menunjukkan objek langsung. Objek langsung adalah orang atau benda yang menerima tindakan dari subjek. Untuk mengenalinya, kita dapat menggunakan pertanyaan Wen? (Siapa?) atau Was? (Apa?).",
+
+      question: "Wen? (Siapa?) / Was? (Apa?)",
+
+      examples: [
+        {
+          german: "Ich sehe den Mann.",
+          translation: "Aku melihat pria itu.",
+          explanation:
+            "Ich merupakan subjek, sedangkan den Mann adalah objek langsung yang dilihat.",
+        },
+        {
+          german: "Sie kauft eine Tasche.",
+          translation: "Dia membeli sebuah tas.",
+          explanation:
+            "Eine Tasche merupakan objek langsung dari tindakan membeli.",
+        },
+        {
+          german: "Er liest das Buch.",
+          translation: "Dia membaca buku itu.",
+          explanation:
+            "Das Buch merupakan objek langsung dari tindakan membaca.",
+        },
+      ],
+    },
+
+    definiteArticles: {
+      title: "Definite Articles",
+      description:
+        "Perhatikan perubahan artikel tertentu dalam Akkusativ. Perubahan paling penting terjadi pada kata benda maskulin.",
+
+      table: [
+        {
+          gender: "Maskulin",
+          german: "den",
+          example: "den Mann",
+          translation: "pria itu",
+        },
+        {
+          gender: "Feminin",
+          german: "die",
+          example: "die Frau",
+          translation: "wanita itu",
+        },
+        {
+          gender: "Neutrum",
+          german: "das",
+          example: "das Kind",
+          translation: "anak itu",
+        },
+        {
+          gender: "Plural",
+          german: "die",
+          example: "die Kinder",
+          translation: "anak-anak itu",
+        },
+      ],
+    },
+
+    indefiniteArticles: {
+      title: "Indefinite Articles",
+      description:
+        "Indefinite article juga mengalami perubahan pada bentuk maskulin. Ein berubah menjadi einen.",
+
+      table: [
+        {
+          gender: "Maskulin",
+          german: "einen",
+          example: "einen Mann",
+          translation: "seorang pria",
+        },
+        {
+          gender: "Feminin",
+          german: "eine",
+          example: "eine Frau",
+          translation: "seorang wanita",
+        },
+        {
+          gender: "Neutrum",
+          german: "ein",
+          example: "ein Kind",
+          translation: "seorang anak",
+        },
+      ],
+    },
+
+    pronouns: {
+      title: "Personal Pronouns",
+      description:
+        "Personal pronouns juga mengalami perubahan ketika digunakan sebagai objek langsung dalam Akkusativ.",
+
+      table: [
+        {
+          german: "mich",
+          translation: "aku / saya",
+        },
+        {
+          german: "dich",
+          translation: "kamu",
+        },
+        {
+          german: "ihn",
+          translation: "dia (laki-laki)",
+        },
+        {
+          german: "sie",
+          translation: "dia (perempuan)",
+        },
+        {
+          german: "es",
+          translation: "dia (netral)",
+        },
+        {
+          german: "uns",
+          translation: "kami / kita",
+        },
+        {
+          german: "euch",
+          translation: "kalian",
+        },
+        {
+          german: "sie",
+          translation: "mereka",
+        },
+        {
+          german: "Sie",
+          translation: "Anda (formal)",
+        },
+      ],
+    },
+
+    sentenceExamples: [
+      {
+        german: "Ich sehe den Hund.",
+        translation: "Aku melihat anjing itu.",
+        subject: "Ich",
+        explanation:
+          "Ich merupakan subjek, sedangkan den Hund merupakan objek langsung. Artikel der berubah menjadi den.",
+      },
+      {
+        german: "Der Lehrer liest das Buch.",
+        translation: "Guru itu membaca buku tersebut.",
+        subject: "Der Lehrer",
+        explanation:
+          "Der Lehrer adalah subjek. Das Buch adalah objek langsung dan artikelnya tetap das.",
+      },
+      {
+        german: "Wir kaufen eine Tasche.",
+        translation: "Kami membeli sebuah tas.",
+        subject: "Wir",
+        explanation:
+          "Eine Tasche merupakan objek langsung. Artikel feminin eine tidak berubah.",
+      },
+      {
+        german: "Sie besucht ihren Freund.",
+        translation: "Dia mengunjungi teman laki-lakinya.",
+        subject: "Sie",
+        explanation:
+          "Sie adalah subjek, sedangkan ihren Freund adalah objek langsung. Artikel kepemilikan maskulin ihren menunjukkan Akkusativ.",
+      },
+    ],
+
+    commonMistakes: [
+      {
+        incorrect: "Ich sehe der Mann.",
+        correct: "Ich sehe den Mann.",
+        explanation:
+          "Mann merupakan objek langsung maskulin. Artikel der harus berubah menjadi den.",
+      },
+      {
+        incorrect: "Er hat ein Hund.",
+        correct: "Er hat einen Hund.",
+        explanation:
+          "Hund merupakan objek langsung maskulin. Ein berubah menjadi einen dalam Akkusativ.",
+      },
+      {
+        incorrect: "Ich sehe dich? (untuk maksud: Aku melihat dia laki-laki.)",
+        correct: "Ich sehe ihn.",
+        explanation:
+          "Ihn adalah bentuk Akkusativ dari er. Dich berarti kamu sebagai objek.",
+      },
+      {
+        incorrect: "Ich sehe er.",
+        correct: "Ich sehe ihn.",
+        explanation:
+          "Er adalah bentuk Nominativ, sedangkan ihn adalah bentuk Akkusativ untuk kata ganti orang ketiga maskulin.",
+      },
+    ],
+
+    quiz: [
+      {
+        question: "Ich sehe ___ Mann.",
+        options: ["der", "den", "dem", "des"],
+        answer: 1,
+        explanation:
+          "Mann merupakan objek langsung maskulin. Artikel der berubah menjadi den.",
+      },
+      {
+        question: "Er kauft ___ Auto.",
+        options: ["einen", "eine", "ein", "einem"],
+        answer: 2,
+        explanation:
+          "Auto merupakan kata benda neutrum. Artikel ein tetap ein dalam Akkusativ.",
+      },
+      {
+        question: "Apa bentuk Akkusativ dari er?",
+        options: ["ihm", "ihn", "sein", "sie"],
+        answer: 1,
+        explanation:
+          "Er berubah menjadi ihn ketika digunakan sebagai objek langsung.",
+      },
+      {
+        question: "Welche Antwort ist richtig?",
+        options: [
+          "Ich sehe der Hund.",
+          "Ich sehe dem Hund.",
+          "Ich sehe den Hund.",
+          "Ich sehe des Hundes.",
+        ],
+        answer: 2,
+        explanation: "Den Hund merupakan bentuk Akkusativ dari der Hund.",
+      },
+      {
+        question: "Sie besucht ___ Frau.",
+        options: ["der", "den", "die", "dem"],
+        answer: 2,
+        explanation:
+          "Frau merupakan kata benda feminin. Artikel die tetap die dalam Akkusativ.",
+      },
+    ],
+  },
 };
